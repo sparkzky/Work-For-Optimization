@@ -1,11 +1,18 @@
 add_rules("mode.debug", "mode.release")
-
-target("work_for_optimization")
-    set_kind("binary")
-    add_files("src/*.cpp")
-
 set_optimize("fastest")
 set_languages("c++17")
+
+
+target("id_manager")
+    set_kind("binary")
+    add_files("src/id_manager.cpp")
+    add_cxflags("-mavx", "-mfma")
+
+target("2-1")
+    set_kind("binary")
+    add_files("src/2-1.cpp")
+    add_cxflags("-mavx", "-mfma")
+
 
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
