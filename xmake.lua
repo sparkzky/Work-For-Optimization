@@ -13,7 +13,10 @@ target("2-1")
     add_files("src/2-1.cpp")
     add_cxflags("-mavx", "-mfma")
 
-
+target("2-4")
+    set_kind("binary")
+    add_files("src/2-4.cpp")
+    
 --
 -- If you want to known more usage about xmake, please see https://xmake.io
 --
